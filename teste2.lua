@@ -1,4 +1,8 @@
-if not game:GetService("Players").LocalPlayer.Character then
+while #game:GetService("Players"):GetPlayers() < 0 and (not game:GetService("Players").LocalPlayer) do
+	wait()
+end
+
+if  not game:GetService("Players").LocalPlayer.Character then
 	game:GetService("Players").LocalPlayer.CharacterAdded:wait()
 end
 
