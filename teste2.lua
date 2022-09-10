@@ -16,7 +16,7 @@ end
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     if State == Enum.TeleportState.Started then
-        syn.queue_on_teleport("Wait(15) loadstring(game:HttpGet('https://github.com/ctl3d32/Teste/blob/main/teste2.lua',true))()")
+        syn.queue_on_teleport("Wait(35) loadstring(game:HttpGet('https://raw.githubusercontent.com/ctl3d32/Teste/main/teste2.lua',true))()")
     end
 end)
 
