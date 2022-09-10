@@ -1,3 +1,7 @@
+if not game:GetService("Players").LocalPlayer:FindFirstChild("Character") then
+	game:GetService("Players").LocalPlayer:WaitForChild("Character")
+end
+
 local function TryTeleportToShroomcalipse()
 	if game.PlaceId == 3852057184 then
 		print('teleporting from Crossroads to Shroomcalipse...')
