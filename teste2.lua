@@ -1,8 +1,9 @@
 local Players = game:GetService("Players")
+-- Below: access Players.LocalPlayer; if it is nil, we'll wait for it using GetPropertyChangedSignal.
 local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):wait()
-local character = player.Character
-if not character or not character.Parent then
-    character = player.CharacterAdded:wait()
+
+if not game:GetService("Players").LocalPlayer.Character then
+	game:GetService("Players").LocalPlayer.CharacterAdded:wait()
 end
 
 local function TryTeleportToShroomcalipse()
