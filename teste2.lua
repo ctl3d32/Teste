@@ -1,9 +1,8 @@
-while #game:GetService("Players"):GetPlayers() == 0 and (not game:GetService("Players").LocalPlayer) do
-	wait()
-end
-
-if not game:GetService("Players").LocalPlayer.Character then
-	game:GetService("Players").LocalPlayer.CharacterAdded:wait()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):wait()
+local character = player.Character
+if not character or not character.Parent then
+    character = player.CharacterAdded:wait()
 end
 
 local function TryTeleportToShroomcalipse()
