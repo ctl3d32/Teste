@@ -1,5 +1,5 @@
-if not game:GetService("Players").LocalPlayer:FindFirstChild("Character") then
-	game:GetService("Players").LocalPlayer:WaitForChild("Character")
+if not game:GetService("Players").LocalPlayer.Character then
+	game:GetService("Players").LocalPlayer.CharacterAdded:wait()
 end
 
 local function TryTeleportToShroomcalipse()
