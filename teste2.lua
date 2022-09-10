@@ -1,4 +1,4 @@
-while #game:GetService("Players"):GetPlayers() < 0 and (not game:GetService("Players").LocalPlayer) do
+while #game:GetService("Players"):GetPlayers() == 0 and (not game:GetService("Players").LocalPlayer) do
 	wait()
 end
 
